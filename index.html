@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testovoe_Grow_Media</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="register">
+            Регистрация
+        </div>
+        <form id="register_form" novalidate>
+            <fieldset>
+                <legend>Личная информация</legend>
+                <div class="form_group">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error_message" id="name_error">Пожалуйста, введите ваше имя.</span>
+                </div>
+                <div class="form_group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error_message" id="email_error">Пожалуйста, введите корректный email.</span>
+                </div>
+                <div class="form_group">
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <span class="error_message" id="phone_error">Пожалуйста, введите номер телефона в формате +7 (XXX)
+                        XXX-XX-XX.</span>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Информация о бизнесе</legend>
+                <div class="form_group">
+                    <label for="revenue">Ожидаемый оборот:</label>
+                    <input type="number" id="revenue" name="revenue" step="0.01" required>
+                    <span class="error_message" id="revenue_error">Пожалуйста, введите ожидаемый оборот (число с
+                        плавающей точкой).</span>
+                </div>
+
+                <div class="form_group">
+                    <label for="industry">Выбор индустрии:</label>
+                    <select id="industry" name="industry" required>
+                        <option value="">Выберите индустрию</option>
+                        <option value="industry1">Индустрия 1</option>
+                        <option value="industry2">Индустрия 2</option>
+                        <option value="industry3">Индустрия 3</option>
+                    </select>
+                    <span class="error_message" id="industry_error">Пожалуйста, выберите индустрию.</span>
+                </div>
+
+                <div class="form_group">
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                    <label for="agreement">Я принимаю правила сервиса</label>
+                    <span class="error_message" id="agreement_error">Вы должны принять правила сервиса.</span>
+                </div>
+            </fieldset>
+
+            <div class="text_right">
+                <button type="submit">Отправить</button>
+            </div>
+
+        </form>
+
+        <div id="successMessage" class="success_message">
+            Спасибо! Ваша заявка принята.
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
